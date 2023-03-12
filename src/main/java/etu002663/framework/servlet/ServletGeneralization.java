@@ -3,13 +3,15 @@ package etu002663.framework.servlet;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
+import mapping.Mapping;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 @WebServlet(name = "ServletGeneralization", value = "/ServletGeneralization")
 public class ServletGeneralization extends HttpServlet {
 
-    HashMap<String,Mapping> mappingUrl;
+    HashMap<String, Mapping> mappingUrl;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
