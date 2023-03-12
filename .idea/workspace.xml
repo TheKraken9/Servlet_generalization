@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1587da3f-6d37-4821-b658-e76b3766445c" name="Changes" comment="">
+    <list default="true" id="1587da3f-6d37-4821-b658-e76b3766445c" name="Changes" comment="insertion of modification">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/etu002663/framework/servlet/ServletGeneralization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/etu002663/framework/servlet/ServletGeneralization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
