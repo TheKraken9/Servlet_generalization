@@ -19,10 +19,10 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-import javax.management.modelmbean.RequiredModelMBean;
-import javax.servlet.*;
-import javax.servlet.annotation.*;
-import javax.servlet.http.*;
+//import jakarta.management.modelmbean.RequiredModelMBean;
+import jakarta.servlet.*;
+import jakarta.servlet.annotation.*;
+import jakarta.servlet.http.*;
 
 
 import etu2663.framework.Annotation;
