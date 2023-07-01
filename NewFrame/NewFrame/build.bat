@@ -1,9 +1,9 @@
 @REM For the framework compilation
 
-set "FRAMEWORK_FOLDER=C:\Users\26134\Music\Framew\NewFrame\"
-set FRAMEWORK="C:\Users\26134\Music\Framew\NewFrame\Framework"
+set "FRAMEWORK_FOLDER=C:\Users\26134\Documents\GitHub\Servlet_generalization\NewFrame\NewFrame\"
+set FRAMEWORK="C:\Users\26134\Documents\GitHub\Servlet_generalization\NewFrame\NewFrame\Framework"
 set TOMCAT="C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps"
-set TESTFRAMEWORK="C:\Users\26134\Music\Framew\NewFrame\TestFramework"
+set TESTFRAMEWORK="C:\Users\26134\Documents\GitHub\Servlet_generalization\NewFrame\NewFrame\TestFramework"
 
 javac -d %FRAMEWORK%\bin %FRAMEWORK%\\*.java
 cd %FRAMEWORK%\\bin\\

@@ -7,3 +7,4 @@ import java.lang.annotation.*;
 public @interface Scope {
     String type() default " ";
 }
+//singleton

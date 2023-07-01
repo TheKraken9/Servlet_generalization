@@ -20,5 +20,5 @@ public class Outil {
         }
         return lists;
     }
-
+//fonction init
 }
