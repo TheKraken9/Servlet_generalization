@@ -1,17 +1,17 @@
 package Test;
 
-import etu2663.framework.Url;
-import etu2663.framework.Scope;
-import etu2663.framework.Annotation;
-import etu2663.framework.FileUploader;
-import etu2663.framework.Authentication;
-import etu2663.framework.Session;
-import etu2663.framework.RestAPI;
+import etu1987.framework.Url;
+import etu1987.framework.Scope;
+import etu1987.framework.Annotation;
+import etu1987.framework.FileUploader;
+import etu1987.framework.Authentication;
+import etu1987.framework.Session;
+import etu1987.framework.RestAPI;
 
 import java.sql.Date;
 import java.util.HashMap;
 
-import etu2663.framework.Modelview;
+import etu1987.framework.Modelview;
 @Scope(type="Emp")
 public class Emp {
     HashMap<String, Object> session; //tsy maintsy session nenatarany
@@ -83,7 +83,7 @@ public class Emp {
     @Url(url="get-form")
     public Modelview getForm() {
         Modelview m = new Modelview();
-        System.out.println(this.getFile().getName());
+        m.setInvalideSession(true);
         m.setView("Ay.jsp");
         return m;
     }
@@ -106,6 +106,15 @@ public class Emp {
         return m;
     }
     
+    @Url(url = "sessionDestroy")
+    public Modelview sessionDestroy() {
+        Modelview m = new Modelview();
+        m.destroy("profile");
+        m.destroy("isConnected");
+        m.setView("index.jsp");
+        return m;
+    }
+
     @Session
     @Url(url = "session")
     public Modelview testSession() {

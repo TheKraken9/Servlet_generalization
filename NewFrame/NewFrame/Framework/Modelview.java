@@ -1,5 +1,6 @@
-package etu2663.framework;
+package etu1987.framework;
 import java.util.HashMap;
+import java.util.*;
 
 
 public class Modelview {
@@ -7,8 +8,25 @@ public class Modelview {
     HashMap<String, Object> data = new HashMap<String, Object>();
     HashMap<String, Object> session = new HashMap<String, Object>();
     boolean gson = false;
+    boolean invalideSession = false;
+    List<String> sessionDestroy = new ArrayList<>();
 
-
+    public void destroy(String sessionName) {
+        this.getSessionDestroy().add(sessionName);
+    }
+    public void setSessionDestroy(List<String> sessionDestroy) {
+        this.sessionDestroy = sessionDestroy;
+    }
+    public List<String> getSessionDestroy() {
+        return sessionDestroy;
+    }
+    public void setInvalideSession(boolean invalideSession) {
+        this.invalideSession = invalideSession;
+    }
+    public boolean isInvalideSession() {
+        return invalideSession;
+    }
+    
     public void setGson(boolean isGson) {
         this.gson = isGson;
     }

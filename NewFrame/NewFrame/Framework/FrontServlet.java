@@ -1,4 +1,4 @@
-package etu2663.framework.servlet;
+package etu1987.framework.servlet;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -19,22 +19,22 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-import jakarta.management.modelmbean.RequiredModelMBean;
-import jakarta.servlet.*;
-import jakarta.servlet.annotation.*;
-import jakarta.servlet.http.*;
+import javax.management.modelmbean.RequiredModelMBean;
+import javax.servlet.*;
+import javax.servlet.annotation.*;
+import javax.servlet.http.*;
 
 
-import etu2663.framework.Annotation;
-import etu2663.framework.Authentication;
-import etu2663.framework.FileUploader;
-import etu2663.framework.Mapping;
-import etu2663.framework.Modelview;
-import etu2663.framework.Outil;
-import etu2663.framework.Url;
-import etu2663.framework.Scope;
-import etu2663.framework.Session;
-import etu2663.framework.RestAPI;
+import etu1987.framework.Annotation;
+import etu1987.framework.Authentication;
+import etu1987.framework.FileUploader;
+import etu1987.framework.Mapping;
+import etu1987.framework.Modelview;
+import etu1987.framework.Outil;
+import etu1987.framework.Url;
+import etu1987.framework.Scope;
+import etu1987.framework.Session;
+import etu1987.framework.RestAPI;
 
 /**
  * FrontServler
@@ -206,7 +206,7 @@ public class FrontServlet extends HttpServlet {
                 try {
                     Collection<Part> files = request.getParts();
                     for (Field f : fields) {
-                        if (f.getType() == etu2663.framework.FileUploader.class) {
+                        if (f.getType() == etu1987.framework.FileUploader.class) {
                             String s1 = f.getName().substring(0, 1).toUpperCase();
                             String seter = s1 + f.getName().substring(1);
                             Method m = clazz.getMethod("set" + seter, f.getType());
@@ -267,7 +267,14 @@ public class FrontServlet extends HttpServlet {
                     if (modelview.isGson()) {
                         response.setContentType("application/json");
                         out.println(new com.google.gson.Gson().toJson(data));
-                    } else {
+                    }
+                    else {
+                        if (modelview.isInvalideSession()) {
+                            request.getSession().invalidate();
+                        }
+                        for (String each : modelview.getSessionDestroy()) {
+                            request.getSession().removeAttribute(each);
+                        }
                         RequestDispatcher requestDispatcher = request.getRequestDispatcher(modelview.getView());
                         requestDispatcher.forward(request, response);
                     }

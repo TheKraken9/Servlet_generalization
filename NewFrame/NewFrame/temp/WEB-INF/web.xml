@@ -9,7 +9,7 @@
 
     <servlet>
         <servlet-name>FrontServlet</servlet-name>
-        <servlet-class>etu2663.framework.servlet.FrontServlet</servlet-class>
+        <servlet-class>etu1987.framework.servlet.FrontServlet</servlet-class>
         <init-param>
             <param-name>sessionName</param-name>
             <param-value>isConnected</param-value>
