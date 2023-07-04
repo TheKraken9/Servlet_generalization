@@ -1,4 +1,4 @@
-package etu1987.framework;
+package etu2663.framework;
 
 public class Mapping {
     String className;

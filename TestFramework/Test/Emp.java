@@ -1,6 +1,6 @@
 package Test;
 
-import etu1987.framework.Url;
+import etu2663.framework.Url;
 
 public class Emp {
     

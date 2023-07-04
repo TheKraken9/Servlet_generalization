@@ -1,4 +1,4 @@
-package etu1987.framework.servlet;
+package etu2663.framework.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,9 +12,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import etu1987.framework.Mapping;
-import etu1987.framework.Outil;
-import etu1987.framework.Url;
+import etu2663.framework.Mapping;
+import etu2663.framework.Outil;
+import etu2663.framework.Url;
 
 /**
  * FrontServler
